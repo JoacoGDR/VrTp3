@@ -73,6 +73,4 @@ crashlytics-build.properties
 
 .DS_Store
 
-mono_crash.0.1.json
-
-mono_crash.0.2.json
+mono_crash.*
