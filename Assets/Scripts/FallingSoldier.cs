@@ -40,7 +40,11 @@ public class FallingSoldier : MonoBehaviour
             }
         }
         else if (hasLanded){
-            if(navMeshAgent != null & navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance){
+            if(navMeshAgent == null)
+            {
+                return;
+            }
+            else if( navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance){
                 animator.SetBool("Running", false);
                 gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
                 animator.SetBool("Shooting", true);
