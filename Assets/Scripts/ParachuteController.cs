@@ -44,7 +44,7 @@ public class ParachuteController : MonoBehaviour
             if(rb.velocity.y == 0){
                 if(wasActivated == false)
                 {//DIED
-                    characterObject.isAlive = false; 
+                    characterObject.kill(); 
                     missionFailedText.text = "Mission Failed, soldier \n Press R to restart.";
                 }
                 isFalling = false;
